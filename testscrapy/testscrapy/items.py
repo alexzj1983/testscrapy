@@ -16,4 +16,4 @@ class TestscrapyItem(scrapy.Item):
 class GgzyItem(scrapy.Item):
     title = scrapy.Field()
     link = scrapy.Field()
-    # desc = scrapy.Field()
+    desc = scrapy.Field()

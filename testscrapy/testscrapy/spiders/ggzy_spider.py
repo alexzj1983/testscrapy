@@ -1,5 +1,7 @@
 from scrapy.spider import Spider
 from scrapy.selector import Selector
+from scrapy import log
+
 from testscrapy.items import GgzyItem
 
 class GgzySpider(Spider):

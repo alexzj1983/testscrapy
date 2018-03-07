@@ -1,0 +1,412 @@
+2018-03-07 18:56:17 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: testscrapy)
+2018-03-07 18:56:17 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 3.6.3 (v3.6.3:2c5fed8, Oct  3 2017, 18:11:49) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.16299-SP0
+2018-03-07 18:56:17 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'testscrapy', 'LOG_FILE': 'log', 'NEWSPIDER_MODULE': 'testscrapy.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['testscrapy.spiders']}
+2018-03-07 18:56:17 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-07 18:56:17 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-07 18:56:17 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-07 18:56:17 [scrapy.middleware] INFO: Enabled item pipelines:
+['testscrapy.pipelines.TestscrapyPipeline']
+2018-03-07 18:56:17 [scrapy.core.engine] INFO: Spider opened
+2018-03-07 18:56:17 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-07 18:56:17 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-07 18:56:18 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://www.w3school.com.cn/robots.txt> (referer: None)
+2018-03-07 18:56:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://www.w3school.com.cn/xml/xml_syntax.asp> (referer: None)
+2018-03-07 18:56:18 [py.warnings] WARNING: D:\git-wp\testscrapy\testscrapy\testscrapy\spiders\ggzy_spider.py:32: ScrapyDeprecationWarning: log.msg has been deprecated, create a python logger and log through it instead
+  log.msg("Appending item...",level='INFO')
+
+2018-03-07 18:56:18 [scrapy.core.scraper] ERROR: Spider error processing <GET http://www.w3school.com.cn/xml/xml_syntax.asp> (referer: None)
+Traceback (most recent call last):
+  File "d:\program files\python\lib\site-packages\twisted\internet\defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "D:\git-wp\testscrapy\testscrapy\testscrapy\spiders\ggzy_spider.py", line 32, in parse
+    log.msg("Appending item...",level='INFO')
+  File "d:\program files\python\lib\site-packages\scrapy\log.py", line 49, in msg
+    logger.log(level, message, *[kw] if kw else [])
+  File "d:\program files\python\lib\logging\__init__.py", line 1368, in log
+    raise TypeError("level must be an integer")
+TypeError: level must be an integer
+2018-03-07 18:56:18 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-03-07 18:56:18 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 464,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 6954,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/404': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 3, 7, 10, 56, 18, 300031),
+ 'log_count/DEBUG': 3,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'spider_exceptions/TypeError': 1,
+ 'start_time': datetime.datetime(2018, 3, 7, 10, 56, 17, 822452)}
+2018-03-07 18:56:18 [scrapy.core.engine] INFO: Spider closed (finished)
+2018-03-08 01:26:13 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: testscrapy)
+2018-03-08 01:26:13 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 3.6.3 (v3.6.3:2c5fed8, Oct  3 2017, 18:11:49) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.16299-SP0
+2018-03-08 01:26:13 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'testscrapy', 'LOG_FILE': 'log', 'NEWSPIDER_MODULE': 'testscrapy.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['testscrapy.spiders']}
+2018-03-08 01:26:13 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-08 01:26:14 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-08 01:26:14 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-08 01:26:14 [scrapy.middleware] INFO: Enabled item pipelines:
+['testscrapy.pipelines.TestscrapyPipeline']
+2018-03-08 01:26:14 [scrapy.core.engine] INFO: Spider opened
+2018-03-08 01:26:14 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-08 01:26:14 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-08 01:26:14 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://deal.ggzy.gov.cn/robots.txt> (referer: None)
+2018-03-08 01:26:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://deal.ggzy.gov.cn/ds/deal/dealList.jsp> (referer: None)
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0101/201801/04/00543c03600af46a49c58c26e37d98ec6fbd.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡仓木坚村整村推进民房重建项目无标段二次招标公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0101/201801/04/00543631702e8d9649b1b78ab75d04f76c2d.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡陈塘村、达仓村整村推进民房重建项目无标段二次招标公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0105/201801/04/0054ffeb26bfd5894d5ba0ff9bf680b7e835.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡仓木坚村整村推进民房重建项目无标段二次招标文件']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0105/201801/04/0054a17bf58d4eba48a680498459f5ab7834.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡陈塘村、达仓村整村推进民房重建项目无标段二次招标文件']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/660000/0201/201803/07/00663a221242d7eb42a585416ff321d44f22.shtml'],
+ 'title': ['第二师人力资源和社会保障局办公用品、办公家具采购项目二次公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/640000/0104/201803/07/006491e25e969ddc4b3bbbdc6bf855e12ee0.shtml'],
+ 'title': ['盐池县综合农贸市场建设项目监理七标段中标结果公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/640000/0104/201803/07/006487dd5ee18a8b43249e3e4e90e9a92be8.shtml'],
+ 'title': ['吴忠市区“城市双修”重点街区沿街建筑物立面改造、门头牌匾及户外广告整治工程(设计)中标结果公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/660000/0201/201803/07/00668f337c3166994abe9b8169b65447ff14.shtml'],
+ 'title': ['2018年游憩广场、世纪广场绿化管护服务项目招标公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/450000/0201/201803/07/00456771a67880e144c5acdb7ed0e514d0fe.shtml'],
+ 'title': ['龙胜创建全国旅游标准化示范县标准体系编制项目采购公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/620000/0104/201803/07/006282b7e18b3f9d41b9952a2520cbb8cd89.shtml'],
+ 'title': ['古浪县西靖镇排水渠道建设项目中标公示']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013d33437d0071f458bb1040d1a5c209b60.shtml'],
+ 'title': ['中国共产党武安市纪律检查委员会谈话室装修改造采购项目中标公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/00131bd8d96affc34551b6425d65a0e82f77.shtml'],
+ 'title': ['唐山市开平区栗园镇人民政府陡河水库周边（栗园镇）部分已取缔坑塘土地整理工程中标公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/001314952fc9b69e44598a48f0964047e862.shtml'],
+ 'title': ['河北工程大学家属楼和电力小区家属楼风道改造及油烟治理工程中标公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013d48f714368be4e5b95eee608b10e5e8c.shtml'],
+ 'title': ['广府旅游景区太极小镇提升项目中标公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013cabacfa863d243389134da9b58b7acb0.shtml'],
+ 'title': ['阜城县总体规划编制项目成交公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013b286467165514fe9814af5823a339313.shtml'],
+ 'title': ['魏县天安大道（魏都大街至广源大街）两侧建筑包装改造项目中标公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013ae9a53675532427ca98a24ecb6df1614.shtml'],
+ 'title': ['石家庄市第四医院消毒供应中心设备采购及安装中标公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013943ff2344bba49878ad7592a90b034e3.shtml'],
+ 'title': ['邢台市桥东区计生协会会员活动中心工程中标公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/00131ddfac9077fe438dadc220ecdacf4e8b.shtml'],
+ 'title': ['定州市疾病预防控制中心流感实验室建设（设备采购）中标公告']}
+2018-03-08 01:26:14 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/001315e536b4f94d44d6a62b7c50191d8510.shtml'],
+ 'title': ['永年区道路整修绿化提升工程（西部道路绿化提升）施工监理中标公告']}
+2018-03-08 01:26:14 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-03-08 01:26:14 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 460,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 120008,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/404': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 3, 7, 17, 26, 14, 855957),
+ 'item_scraped_count': 20,
+ 'log_count/DEBUG': 23,
+ 'log_count/INFO': 7,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 3, 7, 17, 26, 14, 199562)}
+2018-03-08 01:26:14 [scrapy.core.engine] INFO: Spider closed (finished)
+2018-03-08 01:26:30 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: testscrapy)
+2018-03-08 01:26:30 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 3.6.3 (v3.6.3:2c5fed8, Oct  3 2017, 18:11:49) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.16299-SP0
+2018-03-08 01:26:30 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'testscrapy', 'LOG_FILE': 'log', 'NEWSPIDER_MODULE': 'testscrapy.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['testscrapy.spiders']}
+2018-03-08 01:26:30 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-08 01:26:31 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-08 01:26:31 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-08 01:26:31 [scrapy.middleware] INFO: Enabled item pipelines:
+['testscrapy.pipelines.TestscrapyPipeline']
+2018-03-08 01:26:31 [scrapy.core.engine] INFO: Spider opened
+2018-03-08 01:26:31 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-08 01:26:31 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-08 01:26:31 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://deal.ggzy.gov.cn/robots.txt> (referer: None)
+2018-03-08 01:26:31 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://deal.ggzy.gov.cn/ds/deal/dealList.jsp> (referer: None)
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0101/201801/04/00543c03600af46a49c58c26e37d98ec6fbd.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡仓木坚村整村推进民房重建项目无标段二次招标公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0101/201801/04/00543631702e8d9649b1b78ab75d04f76c2d.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡陈塘村、达仓村整村推进民房重建项目无标段二次招标公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0105/201801/04/0054ffeb26bfd5894d5ba0ff9bf680b7e835.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡仓木坚村整村推进民房重建项目无标段二次招标文件']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0105/201801/04/0054a17bf58d4eba48a680498459f5ab7834.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡陈塘村、达仓村整村推进民房重建项目无标段二次招标文件']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/660000/0201/201803/07/00663a221242d7eb42a585416ff321d44f22.shtml'],
+ 'title': ['第二师人力资源和社会保障局办公用品、办公家具采购项目二次公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/640000/0104/201803/07/006491e25e969ddc4b3bbbdc6bf855e12ee0.shtml'],
+ 'title': ['盐池县综合农贸市场建设项目监理七标段中标结果公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/640000/0104/201803/07/006487dd5ee18a8b43249e3e4e90e9a92be8.shtml'],
+ 'title': ['吴忠市区“城市双修”重点街区沿街建筑物立面改造、门头牌匾及户外广告整治工程(设计)中标结果公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/660000/0201/201803/07/00668f337c3166994abe9b8169b65447ff14.shtml'],
+ 'title': ['2018年游憩广场、世纪广场绿化管护服务项目招标公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/450000/0201/201803/07/00456771a67880e144c5acdb7ed0e514d0fe.shtml'],
+ 'title': ['龙胜创建全国旅游标准化示范县标准体系编制项目采购公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/620000/0104/201803/07/006282b7e18b3f9d41b9952a2520cbb8cd89.shtml'],
+ 'title': ['古浪县西靖镇排水渠道建设项目中标公示']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013d33437d0071f458bb1040d1a5c209b60.shtml'],
+ 'title': ['中国共产党武安市纪律检查委员会谈话室装修改造采购项目中标公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/00131bd8d96affc34551b6425d65a0e82f77.shtml'],
+ 'title': ['唐山市开平区栗园镇人民政府陡河水库周边（栗园镇）部分已取缔坑塘土地整理工程中标公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/001314952fc9b69e44598a48f0964047e862.shtml'],
+ 'title': ['河北工程大学家属楼和电力小区家属楼风道改造及油烟治理工程中标公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013d48f714368be4e5b95eee608b10e5e8c.shtml'],
+ 'title': ['广府旅游景区太极小镇提升项目中标公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013cabacfa863d243389134da9b58b7acb0.shtml'],
+ 'title': ['阜城县总体规划编制项目成交公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013b286467165514fe9814af5823a339313.shtml'],
+ 'title': ['魏县天安大道（魏都大街至广源大街）两侧建筑包装改造项目中标公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013ae9a53675532427ca98a24ecb6df1614.shtml'],
+ 'title': ['石家庄市第四医院消毒供应中心设备采购及安装中标公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013943ff2344bba49878ad7592a90b034e3.shtml'],
+ 'title': ['邢台市桥东区计生协会会员活动中心工程中标公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/00131ddfac9077fe438dadc220ecdacf4e8b.shtml'],
+ 'title': ['定州市疾病预防控制中心流感实验室建设（设备采购）中标公告']}
+2018-03-08 01:26:31 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/001315e536b4f94d44d6a62b7c50191d8510.shtml'],
+ 'title': ['永年区道路整修绿化提升工程（西部道路绿化提升）施工监理中标公告']}
+2018-03-08 01:26:31 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-03-08 01:26:31 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 460,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 120008,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/404': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 3, 7, 17, 26, 31, 601001),
+ 'item_scraped_count': 20,
+ 'log_count/DEBUG': 23,
+ 'log_count/INFO': 7,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 3, 7, 17, 26, 31, 68780)}
+2018-03-08 01:26:31 [scrapy.core.engine] INFO: Spider closed (finished)
+2018-03-08 01:32:01 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: testscrapy)
+2018-03-08 01:32:01 [scrapy.utils.log] INFO: Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 3.6.3 (v3.6.3:2c5fed8, Oct  3 2017, 18:11:49) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Windows-10-10.0.16299-SP0
+2018-03-08 01:32:01 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'testscrapy', 'LOG_FILE': 'log', 'NEWSPIDER_MODULE': 'testscrapy.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['testscrapy.spiders']}
+2018-03-08 01:32:01 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-03-08 01:32:01 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-03-08 01:32:01 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-03-08 01:32:01 [scrapy.middleware] INFO: Enabled item pipelines:
+['testscrapy.pipelines.TestscrapyPipeline']
+2018-03-08 01:32:01 [scrapy.core.engine] INFO: Spider opened
+2018-03-08 01:32:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-03-08 01:32:01 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-03-08 01:32:03 [scrapy.core.engine] DEBUG: Crawled (404) <GET http://deal.ggzy.gov.cn/robots.txt> (referer: None)
+2018-03-08 01:32:04 [scrapy.core.engine] DEBUG: Crawled (200) <GET http://deal.ggzy.gov.cn/ds/deal/dealList.jsp> (referer: None)
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0101/201801/04/00543c03600af46a49c58c26e37d98ec6fbd.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡仓木坚村整村推进民房重建项目无标段二次招标公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0101/201801/04/00543631702e8d9649b1b78ab75d04f76c2d.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡陈塘村、达仓村整村推进民房重建项目无标段二次招标公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0105/201801/04/0054ffeb26bfd5894d5ba0ff9bf680b7e835.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡仓木坚村整村推进民房重建项目无标段二次招标文件']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/540000/0105/201801/04/0054a17bf58d4eba48a680498459f5ab7834.shtml'],
+ 'title': ['定日县“4.25”灾后重建绒辖乡陈塘村、达仓村整村推进民房重建项目无标段二次招标文件']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/660000/0201/201803/07/00663a221242d7eb42a585416ff321d44f22.shtml'],
+ 'title': ['第二师人力资源和社会保障局办公用品、办公家具采购项目二次公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/640000/0104/201803/07/006491e25e969ddc4b3bbbdc6bf855e12ee0.shtml'],
+ 'title': ['盐池县综合农贸市场建设项目监理七标段中标结果公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/640000/0104/201803/07/006487dd5ee18a8b43249e3e4e90e9a92be8.shtml'],
+ 'title': ['吴忠市区“城市双修”重点街区沿街建筑物立面改造、门头牌匾及户外广告整治工程(设计)中标结果公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/660000/0201/201803/07/00668f337c3166994abe9b8169b65447ff14.shtml'],
+ 'title': ['2018年游憩广场、世纪广场绿化管护服务项目招标公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/450000/0201/201803/07/00456771a67880e144c5acdb7ed0e514d0fe.shtml'],
+ 'title': ['龙胜创建全国旅游标准化示范县标准体系编制项目采购公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/620000/0104/201803/07/006282b7e18b3f9d41b9952a2520cbb8cd89.shtml'],
+ 'title': ['古浪县西靖镇排水渠道建设项目中标公示']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013d33437d0071f458bb1040d1a5c209b60.shtml'],
+ 'title': ['中国共产党武安市纪律检查委员会谈话室装修改造采购项目中标公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/00131bd8d96affc34551b6425d65a0e82f77.shtml'],
+ 'title': ['唐山市开平区栗园镇人民政府陡河水库周边（栗园镇）部分已取缔坑塘土地整理工程中标公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/001314952fc9b69e44598a48f0964047e862.shtml'],
+ 'title': ['河北工程大学家属楼和电力小区家属楼风道改造及油烟治理工程中标公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013d48f714368be4e5b95eee608b10e5e8c.shtml'],
+ 'title': ['广府旅游景区太极小镇提升项目中标公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013cabacfa863d243389134da9b58b7acb0.shtml'],
+ 'title': ['阜城县总体规划编制项目成交公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013b286467165514fe9814af5823a339313.shtml'],
+ 'title': ['魏县天安大道（魏都大街至广源大街）两侧建筑包装改造项目中标公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013ae9a53675532427ca98a24ecb6df1614.shtml'],
+ 'title': ['石家庄市第四医院消毒供应中心设备采购及安装中标公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/0013943ff2344bba49878ad7592a90b034e3.shtml'],
+ 'title': ['邢台市桥东区计生协会会员活动中心工程中标公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/00131ddfac9077fe438dadc220ecdacf4e8b.shtml'],
+ 'title': ['定州市疾病预防控制中心流感实验室建设（设备采购）中标公告']}
+2018-03-08 01:32:04 [scrapy.core.scraper] DEBUG: Scraped from <200 http://deal.ggzy.gov.cn/ds/deal/dealList.jsp>
+{'link': ['http://www.ggzy.gov.cn/information/html/a/130000/0202/201803/07/001315e536b4f94d44d6a62b7c50191d8510.shtml'],
+ 'title': ['永年区道路整修绿化提升工程（西部道路绿化提升）施工监理中标公告']}
+2018-03-08 01:32:04 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-03-08 01:32:04 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 460,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 120008,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/404': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 3, 7, 17, 32, 4, 228513),
+ 'item_scraped_count': 20,
+ 'log_count/DEBUG': 23,
+ 'log_count/INFO': 7,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 3, 7, 17, 32, 1, 339653)}
+2018-03-08 01:32:04 [scrapy.core.engine] INFO: Spider closed (finished)
