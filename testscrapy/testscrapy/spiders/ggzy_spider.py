@@ -14,16 +14,15 @@ class GgzySpider(scrapy.Spider):
         return scrapy.FormRequest.from_response(
             response,
             formdata={'FINDTXT': '智慧园区'},
-            callback=self.parse_p0
+            callback=self.parse_fd
         )
 
-    def parse_p0(self,response):
-        sel = scrapy.Selector(response)
-        sites = sel.xpath('//h4/a')
-        items = []
-        for site in sites:
-            item = GgzyItem()
-            item['title'] = site.xpath('text()').extract()
-            item['link'] = site.xpath('@href').extract()
-            items.append(item)
-        return items
+    def parse_fd(self,response):
+        for href in response.css('.publicont h4 a::attr(href)'):
+            url = href.extract()
+            yield scrapy.Request(url,callback=self.parse_url)
+
+    def parse_url(self,response):
+        yield {
+            'title':response.css('h4.h4_o').extract()[0]
+        }
