@@ -1,10 +1,9 @@
-from scrapy.spider import Spider
-from scrapy.selector import Selector
-from scrapy import log
+import scrapy
+
 
 from testscrapy.items import GgzyItem
 
-class GgzySpider(Spider):
+class GgzySpider(scrapy.Spider):
     name = "ggzy"
     allowde_domains = ["deal.ggzy.gov.cn"]
     start_urls = [
@@ -12,7 +11,14 @@ class GgzySpider(Spider):
     ]
 
     def parse(self, response):
-        sel = Selector(response)
+        return scrapy.FormRequest.from_response(
+            response,
+            formdata={'FINDTXT': '智慧园区'},
+            callback=self.parse_p0
+        )
+
+    def parse_p0(self,response):
+        sel = scrapy.Selector(response)
         sites = sel.xpath('//h4/a')
         items = []
         for site in sites:
