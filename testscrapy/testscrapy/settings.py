@@ -19,7 +19,7 @@ NEWSPIDER_MODULE = 'testscrapy.spiders'
 #USER_AGENT = 'testscrapy (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -39,10 +39,21 @@ ROBOTSTXT_OBEY = True
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
-#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-#   'Accept-Language': 'en',
-#}
+DEFAULT_REQUEST_HEADERS = {
+    'Accept':'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    # 'Accept-Encoding':'gzip, deflate',
+    'Accept-Language':'zh-CN,zh;q=0.9',
+    # 'Cache-Control':'max-age=0',
+    # 'Connection':'keep-alive',
+    # 'Content-Length':'226',
+    'Content-Type':'application/x-www-form-urlencoded',
+    # 'Cookie':'JSESSIONID=ba2001082438006fa8856e406bfe',
+    'Host':'deal.ggzy.gov.cn',
+    'Origin':'http://deal.ggzy.gov.cn',
+    'Referer':'http://deal.ggzy.gov.cn/ds/deal/dealList.jsp',
+    'Upgrade-Insecure-Requests':'1',
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36'
+}
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
